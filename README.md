@@ -1,6 +1,6 @@
-# Open-Note
+# Coin Dash
 
-## Date: 7/6/23
+## Date: 7/7/23
 
 ---
 
@@ -16,7 +16,7 @@
 
 ### **_Description_**
 
-#### "Open Note" is a cutting-edge note-taking app that combines the convenience of the MERN stack with the power of the OpenAI API. Users can create, organize, and manage their notes seamlessly while benefiting from the AI-powered summarization feature.
+#### CoinDash is a cutting-edge crypto data visualization app that empowers users to explore and analyze the dynamic world of cryptocurrencies. With real-time market data, interactive charts, and comprehensive insights, users can make informed investment decisions. What sets CoinGraph apart is its personalized chat bot, powered by the OpenAI API, which offers a seamless conversational experience, providing users with tailored recommendations, market updates, and answers to their crypto-related queries. Experience a new level of data-driven decision-making and personalized assistance with CoinGraph.
 
 ---
 
@@ -43,16 +43,16 @@
 
 ### **_Entity Relationship Diagram_**
 
-![](images/ERD.png)
+![](images/erd.png)
 
 ### **_Component Hierarchy Diagram_**
 
-![](images/CHD.png)
+![](images/chd.png)
 
 ### **_WireFrame_**
 
-![](images/WF1.png)
-![](images/WF2.png)
+![](images/dash.png)
+![](images/portfolio.png)
 
 ---
 
@@ -74,7 +74,7 @@
 
 #### 1. Implement OAuth
 
-#### 2. Develop additional features within Open Note, such as a personal/customizable chat bot to ask questions.
+#### 2. Develop additional features within Coin Dash to make cyrpto transactions
 
 ---
 
