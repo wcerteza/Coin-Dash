@@ -9,6 +9,22 @@ const coinSchema = new Schema({
   symbol: {
     type: String,
     required: true
+  },
+  image: {
+    type: String,
+    required: true
+  },
+  price: {
+    type: Number,
+    required: true
+  },
+  volume: {
+    type: Number,
+    required: true
+  },
+  rank: {
+    type: Number,
+    required: true
   }
 })
 
