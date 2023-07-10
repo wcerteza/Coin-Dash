@@ -57,3 +57,52 @@
   color: black;
   transform: rotateY(180deg);
 }
+
+/* sidebar */
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+.Sidebar {
+  height: 100%;
+  width: 250px;
+  background-color: #2F4050;
+}
+
+.SidebarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.SidebarList .SidebarRow {
+  width: 100%;
+  height: 60px;
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto;
+  color: white;
+}
+
+.SidebarList .SidebarRow:hover {
+  cursor: pointer;
+  background-color: #293846;
+}
+
+.SidebarList #active {
+  background-color: #293846;
+}
+
+.SidebarRow #SidebarIcon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+.SidebarRow #SidebarTitle {
+  flex: 70%;
+}
