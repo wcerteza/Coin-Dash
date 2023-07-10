@@ -14,15 +14,15 @@ const coinSchema = new Schema({
     type: String,
     required: true
   },
-  price: {
+  current_price: {
     type: Number,
     required: true
   },
-  volume: {
+  total_volume: {
     type: Number,
     required: true
   },
-  rank: {
+  market_cap_rank: {
     type: Number,
     required: true
   }
