@@ -5,6 +5,7 @@ const cors = require('cors')
 const CoinRouter = require('./routes/CoinRouter')
 const TransactionRouter = require('./routes/TransactionRouter')
 const AuthRouter = require('./routes/AuthRouter')
+const PortfolioRouter = require('./routes/PortfolioRouter')
 
 const PORT = process.env.PORT || 3001
 
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use('/coins', CoinRouter)
 app.use('/transactions', TransactionRouter)
 app.use('/auth', AuthRouter)
+app.use('/portfolio', PortfolioRouter)
 
 app.use('/', (req, res) => {
   res.send(`Connected!`)
