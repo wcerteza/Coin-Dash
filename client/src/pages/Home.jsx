@@ -1,11 +1,5 @@
-import CoinCard from '../components/CoinCard'
-
-const Home = ({ user }) => {
-  return (
-    <div>
-      <CoinCard />
-    </div>
-  )
+const Home = () => {
+  return <div>Home</div>
 }
 
 export default Home

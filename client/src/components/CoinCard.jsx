@@ -1,29 +1,15 @@
 import { useEffect, useState } from 'react'
 import { GetCoins } from '../services/CoinServices'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { lazy } from 'react'
 
-const CoinCard = ({ user }) => {
+const CoinCard = ({ coin, index, handleCardHover }) => {
   let navigate = useNavigate()
 
-  const [coins, setCoins] = useState([])
-
-  useEffect(() => {
-    const handleCoins = async () => {
-      const data = await GetCoins()
-      setCoins(data)
-    }
-    handleCoins()
-  }, [])
-
-  const handleCardHover = (index) => {
-    const updatedCoins = [...coins]
-    updatedCoins[index].isHovered = !updatedCoins[index].isHovered
-    setCoins(updatedCoins)
-  }
-
   return (
-    <div className="coin-card">
-      {coins.map((coin, index) => (
+    <div>
+      <div className="coin-card">
         <div
           className={`flip-card-inner ${coin.isHovered ? 'hover' : ''}`}
           key={coin.id}
@@ -35,12 +21,14 @@ const CoinCard = ({ user }) => {
             <img src={coin.image} alt="" />
           </div>
           <div className="flip-card-back">
-            <p className="title">Price: ${coin.current_price}</p>
-            <p>Market Cap Rank: {coin.market_cap_rank}</p>
-            <p>Volume: {coin.total_volume}</p>
+            <div>
+              <Link to={`/${coin._id}`}>
+                <p>View Details</p>
+              </Link>
+            </div>
           </div>
         </div>
-      ))}
+      </div>
     </div>
   )
 }

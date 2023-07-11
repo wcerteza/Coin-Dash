@@ -8,3 +8,12 @@ export const GetCoins = async () => {
     throw error
   }
 }
+
+export const GetCoinDetail = async (id) => {
+  try {
+    const response = await Client.get(`coins/${id}`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
+}

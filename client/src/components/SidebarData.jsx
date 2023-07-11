@@ -34,6 +34,6 @@ export const SidebarData = [
   {
     title: 'Log In',
     icon: <LoginIcon />,
-    link: '/login'
+    link: '/signin'
   }
 ]
