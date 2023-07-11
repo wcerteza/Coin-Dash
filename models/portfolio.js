@@ -13,10 +13,6 @@ const portfolioSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Coin',
         required: true
-      },
-      quantity: {
-        type: Number,
-        required: true
       }
     }
   ]

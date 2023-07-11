@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { GetCoinDetail } from '../services/CoinServices'
+import { AddCoinToPortfolio } from '../services/PortfolioServices'
+import axios from 'axios'
 
 const Show = () => {
   const [coinDetails, setCoinDetails] = useState()
   let { coin_id } = useParams()
-  console.log(coin_id)
+
   useEffect(() => {
     const getCoinDetails = async () => {
       try {
@@ -18,6 +20,15 @@ const Show = () => {
     getCoinDetails()
   }, [coin_id])
 
+  const AddCoinToPortfolio = async () => {
+    const user = localStorage.getItem('token')
+    const payload = {
+      coinId: coin_id,
+      userId: '64ab4d5d66ae779390c5354e'
+    }
+    axios.post('http://localhost:3001/portfolio', payload)
+  }
+
   return (
     <div>
       {coinDetails && (
@@ -28,6 +39,7 @@ const Show = () => {
           <p>Current Price: ${coinDetails.current_price}</p>
           <p>Total Volume: {coinDetails.total_volume}</p>
           <p>Rank: {coinDetails.market_cap_rank}</p>
+          <button onClick={() => AddCoinToPortfolio()}>add</button>
         </>
       )}
     </div>

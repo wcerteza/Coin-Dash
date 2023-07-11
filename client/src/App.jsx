@@ -8,6 +8,8 @@ import SignIn from './pages/SignIn'
 import Coins from './pages/Coins'
 import { Route, Routes } from 'react-router'
 import Show from './pages/Show'
+import Transactions from './pages/Transactions'
+import Portfolio from './pages/Portfolio'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -37,6 +39,9 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/coins" element={<Coins />} />
           <Route path="/:coin_id" element={<Show />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
       </main>
     </div>
