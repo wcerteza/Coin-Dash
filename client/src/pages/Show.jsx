@@ -4,8 +4,9 @@ import { GetCoinDetail } from '../services/CoinServices'
 import { AddCoinToPortfolio } from '../services/PortfolioServices'
 import axios from 'axios'
 
-const Show = ({ user }) => {
+const Show = ({ user, portfolio }) => {
   const [coinDetails, setCoinDetails] = useState()
+  console.log(portfolio)
   let { coin_id } = useParams()
 
   useEffect(() => {
@@ -25,7 +26,7 @@ const Show = ({ user }) => {
       coinId: coin_id,
       userId: user.id
     }
-    axios.post('http://localhost:3001/portfolio', payload)
+    axios.put(`http://localhost:3001/portfolio/${portfolio._id}/`, payload)
   }
 
   return (

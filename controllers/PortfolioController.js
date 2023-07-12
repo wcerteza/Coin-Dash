@@ -10,12 +10,28 @@ const createPortfolio = async (req, res) => {
   }
 }
 
-const getPortfolio = async (req, res) => {
+const GetPortfolios = async (req, res) => {
   try {
     const portfolios = await Portfolio.find()
     res.json(portfolios)
   } catch (error) {
     res.status(500).json({ error: 'Server error' })
+  }
+}
+
+const getPortfolioById = async (req, res) => {
+  try {
+    console.log('params', req.params)
+
+    const portfolio = await Portfolio.findOne(req.params).populate({
+      path: 'coins',
+      populate: {
+        path: 'coinId'
+      }
+    })
+    res.send(portfolio)
+  } catch (error) {
+    res.status(404).json({ error: 'Portfolio not found!' })
   }
 }
 
@@ -28,6 +44,7 @@ const addCoinToPortfolio = async (req, res) => {
       return res.status(404).json({ error: 'Portfolio not found' })
     }
     portfolio.coins.push({ coinId })
+    console.log(portfolio)
     const updatedPortfolio = await portfolio.save()
     res.send(updatedPortfolio)
   } catch (error) {
@@ -37,6 +54,7 @@ const addCoinToPortfolio = async (req, res) => {
 
 module.exports = {
   createPortfolio,
-  getPortfolio,
-  addCoinToPortfolio
+  GetPortfolios,
+  addCoinToPortfolio,
+  getPortfolioById
 }

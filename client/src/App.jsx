@@ -10,9 +10,12 @@ import { Route, Routes } from 'react-router'
 import Show from './pages/Show'
 import Transactions from './pages/Transactions'
 import Portfolio from './pages/Portfolio'
+import { getPortfolioByUserId } from './services/PortfolioServices'
 
 const App = () => {
   const [user, setUser] = useState(null)
+  const [portfolio, setPortfolio] = useState(null)
+  const [lookForPortfolio, setLookForPortfolio] = useState(false)
 
   useEffect(() => {
     const token = localStorage.getItem('token')
@@ -29,7 +32,18 @@ const App = () => {
   const checkToken = async () => {
     const user = await CheckSession()
     setUser(user)
+    setLookForPortfolio(true)
   }
+
+  if (lookForPortfolio) {
+    const retrievePortfolio = async () => {
+      const port = await getPortfolioByUserId(user.id)
+      setPortfolio(port)
+      setLookForPortfolio(false)
+    }
+    retrievePortfolio()
+  }
+
   return (
     <div className="App">
       <Sidebar user={user} handleLogOut={handleLogOut} />
@@ -38,10 +52,16 @@ const App = () => {
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/coins" element={<Coins user={user} />} />
-          <Route path="/:coin_id" element={<Show user={user} />} />
+          <Route
+            path="/:coin_id"
+            element={<Show user={user} portfolio={portfolio} />}
+          />
           <Route path="/home" element={<Home />} />
           <Route path="/transactions" element={<Transactions user={user} />} />
-          <Route path="/portfolio" element={<Portfolio user={user} />} />
+          <Route
+            path="/portfolio"
+            element={<Portfolio user={user} portfolio={portfolio} />}
+          />
         </Routes>
       </main>
     </div>
