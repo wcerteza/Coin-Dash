@@ -37,11 +37,11 @@ const App = () => {
         <Routes>
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/coins" element={<Coins />} />
-          <Route path="/:coin_id" element={<Show />} />
+          <Route path="/coins" element={<Coins user={user} />} />
+          <Route path="/:coin_id" element={<Show user={user} />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/transactions" element={<Transactions />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/transactions" element={<Transactions user={user} />} />
+          <Route path="/portfolio" element={<Portfolio user={user} />} />
         </Routes>
       </main>
     </div>

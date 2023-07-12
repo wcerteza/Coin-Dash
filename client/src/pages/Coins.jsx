@@ -1,8 +1,10 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react'
 const CoinCard = lazy(() => import('../components/CoinCard'))
 import { GetCoins } from '../services/CoinServices'
+import { useNavigate } from 'react-router-dom'
 
-const Coins = () => {
+const Coins = ({ user }) => {
+  let navigate = useNavigate()
   const [coins, setCoins] = useState([])
 
   useEffect(() => {
@@ -19,7 +21,7 @@ const Coins = () => {
     setCoins(updatedCoins)
   }
 
-  return (
+  return user ? (
     <div className="cardWrapper">
       {coins.map((coin, index) => (
         <Suspense fallback={<div>Loading...</div>}>
@@ -32,6 +34,11 @@ const Coins = () => {
           </div>
         </Suspense>
       ))}
+    </div>
+  ) : (
+    <div>
+      <h3>Please sign in to view Coins</h3>
+      <button onClick={() => navigate('/signin')}>Sign In</button>
     </div>
   )
 }

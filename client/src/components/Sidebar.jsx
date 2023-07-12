@@ -1,6 +1,11 @@
 import { SidebarData } from './SidebarData'
+import LogoutIcon from '@mui/icons-material/Logout'
 
-const Sidebar = () => {
+const Sidebar = ({ handleLogOut }) => {
+  const handleLogoutClick = () => {
+    handleLogOut()
+  }
+
   return (
     <div className="Sidebar">
       <ul className="SidebarList">
@@ -20,6 +25,12 @@ const Sidebar = () => {
           )
         })}
       </ul>
+      <div className="logout" onClick={handleLogoutClick}>
+        <button>
+          <LogoutIcon />
+          Log Out
+        </button>
+      </div>
     </div>
   )
 }
