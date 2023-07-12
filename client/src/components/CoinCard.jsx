@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { GetCoins } from '../services/CoinServices'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import { lazy } from 'react'
 
 const CoinCard = ({ coin, index, handleCardHover }) => {
   let navigate = useNavigate()
