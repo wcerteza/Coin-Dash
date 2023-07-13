@@ -6,7 +6,7 @@ const chatSchema = new Schema({
     type: String,
     required: true
   },
-  response: {
+  completion: {
     type: String,
     required: true
   },
