@@ -8,7 +8,7 @@ import SignIn from './pages/SignIn'
 import Coins from './pages/Coins'
 import { Route, Routes } from 'react-router'
 import Show from './pages/Show'
-import Transactions from './pages/Transactions'
+import Chat from './pages/Chat'
 import Portfolio from './pages/Portfolio'
 import { getPortfolioByUserId } from './services/PortfolioServices'
 
@@ -57,10 +57,17 @@ const App = () => {
             element={<Show user={user} portfolio={portfolio} />}
           />
           <Route path="/home" element={<Home />} />
-          <Route path="/transactions" element={<Transactions user={user} />} />
+          <Route path="/chat" element={<Chat user={user} />} />
           <Route
             path="/portfolio"
-            element={<Portfolio user={user} portfolio={portfolio} />}
+            element={
+              <Portfolio
+                user={user}
+                portfolio={portfolio}
+                setPortfolio={setPortfolio}
+                setLookForPortfolio={setLookForPortfolio}
+              />
+            }
           />
         </Routes>
       </main>

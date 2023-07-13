@@ -7,7 +7,7 @@
 .App {
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: flex
 }
 
 .cardWrapper {
@@ -114,4 +114,14 @@
 }
 .SidebarRow #SidebarTitle {
   flex: 70%;
+}
+
+.main-chat {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }

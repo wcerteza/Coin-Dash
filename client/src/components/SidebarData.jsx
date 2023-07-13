@@ -4,6 +4,7 @@ import FolderIcon from '@mui/icons-material/Folder'
 import ReceiptIcon from '@mui/icons-material/Receipt'
 import HowToRegIcon from '@mui/icons-material/HowToReg'
 import LoginIcon from '@mui/icons-material/Login'
+import ChatIcon from '@mui/icons-material/Chat'
 
 export const SidebarData = [
   {
@@ -22,9 +23,9 @@ export const SidebarData = [
     link: '/portfolio'
   },
   {
-    title: 'Transactions',
-    icon: <ReceiptIcon />,
-    link: '/transactions'
+    title: 'Chat',
+    icon: <ChatIcon />,
+    link: '/chat'
   },
   {
     title: 'Sign Up',

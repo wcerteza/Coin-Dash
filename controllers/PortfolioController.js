@@ -1,4 +1,6 @@
 const Portfolio = require('../models/Portfolio')
+const coin = require('../models/coin')
+const Coin = require('../models/coin')
 
 const createPortfolio = async (req, res) => {
   try {
@@ -44,7 +46,6 @@ const addCoinToPortfolio = async (req, res) => {
       return res.status(404).json({ error: 'Portfolio not found' })
     }
     portfolio.coins.push({ coinId })
-    console.log(portfolio)
     const updatedPortfolio = await portfolio.save()
     res.send(updatedPortfolio)
   } catch (error) {
@@ -52,9 +53,19 @@ const addCoinToPortfolio = async (req, res) => {
   }
 }
 
+const deleteCoinFromPortfolio = async (req, res) => {
+  const portfolioId = req.params.portfolioId
+  const coinId = req.params.coinId
+  const portfolio = await Portfolio.findById(portfolioId)
+  portfolio.coins.splice(coinId, 1)
+  const updatedPortfolio = await portfolio.save()
+  res.send(updatedPortfolio)
+}
+
 module.exports = {
   createPortfolio,
   GetPortfolios,
   addCoinToPortfolio,
-  getPortfolioById
+  getPortfolioById,
+  deleteCoinFromPortfolio
 }

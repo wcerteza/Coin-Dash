@@ -29,8 +29,21 @@ export const CreatePortfolio = async (portfolioData) => {
 
 export const AddCoinToPortfolio = async (portfolioId, coinData) => {
   try {
-    const response = await Client.put(`/portfolios/${portfolioId}`, coinData)
+    const response = await Client.put(`/portfolio/${portfolioId}`, coinData)
     return response.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const DeleteCoinFromPortfolio = async (portfolioId, coinId) => {
+  try {
+    const response = await Client.put(
+      `/portfolio/${portfolioId}/coins/${coinId}`
+    )
+    console.log(response.data.coins)
+    getPortfolioByUserId(portfolioId)
+    return response.data.coins
   } catch (error) {
     throw error
   }

@@ -3,7 +3,7 @@ const logger = require('morgan')
 const cors = require('cors')
 
 const CoinRouter = require('./routes/CoinRouter')
-const TransactionRouter = require('./routes/TransactionRouter')
+const ChatRouter = require('./routes/ChatRouter')
 const AuthRouter = require('./routes/AuthRouter')
 const PortfolioRouter = require('./routes/PortfolioRouter')
 
@@ -19,7 +19,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/coins', CoinRouter)
-app.use('/transactions', TransactionRouter)
+app.use('/chats', ChatRouter)
 app.use('/auth', AuthRouter)
 app.use('/portfolio', PortfolioRouter)
 
