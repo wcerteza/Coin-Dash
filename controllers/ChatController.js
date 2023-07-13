@@ -11,7 +11,7 @@ const createChat = async (req, res) => {
   try {
     const chatCompletion = await openai.createChatCompletion({
       model: 'gpt-3.5-turbo',
-      messages: [{ role: 'user', content: 'Hello world' }]
+      messages: [{ role: 'user', content: 'how are you today?' }]
     })
 
     res.status(200).json(chatCompletion.data)
