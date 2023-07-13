@@ -41,7 +41,6 @@ export const DeleteCoinFromPortfolio = async (portfolioId, coinId) => {
     const response = await Client.put(
       `/portfolio/${portfolioId}/coins/${coinId}`
     )
-    console.log(response.data.coins)
     getPortfolioByUserId(portfolioId)
     return response.data.coins
   } catch (error) {

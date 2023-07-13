@@ -6,7 +6,6 @@ import axios from 'axios'
 
 const Show = ({ user, portfolio }) => {
   const [coinDetails, setCoinDetails] = useState()
-  console.log(portfolio)
   let { coin_id } = useParams()
 
   useEffect(() => {

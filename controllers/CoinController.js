@@ -51,7 +51,6 @@ const CreateCoin = async (req, res) => {
 const GetCoinDetail = async (req, res) => {
   try {
     const coin = await Coin.findById({ _id: req.params.coin_id })
-    console.log(req.params)
     res.send(coin)
   } catch (error) {
     throw error

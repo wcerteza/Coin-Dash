@@ -37,7 +37,7 @@ const Login = async (req, res) => {
     }
     res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
   } catch (error) {
-    console.log(error)
+    throw error
     res.status(401).send({ status: 'Error', msg: 'An error has occurred!' })
   }
 }
@@ -66,7 +66,7 @@ const UpdatePassword = async (req, res) => {
       .status(401)
       .send({ status: 'Error', msg: 'Old Password did not match!' })
   } catch (error) {
-    console.log(error)
+    throw error
     res.status(401).send({
       status: 'Error',
       msg: 'An error has occurred updating password!'

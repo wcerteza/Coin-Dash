@@ -23,8 +23,6 @@ const GetPortfolios = async (req, res) => {
 
 const getPortfolioById = async (req, res) => {
   try {
-    console.log('params', req.params)
-
     const portfolio = await Portfolio.findOne(req.params).populate({
       path: 'coins',
       populate: {
