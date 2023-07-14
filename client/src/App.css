@@ -11,9 +11,12 @@
 }
 
 .cardWrapper {
+  width: 80vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .coin-card {
@@ -75,9 +78,9 @@
 
 .Sidebar {
   height: 100vh;
-  width: 260px;
+  width: 21.1vw;
+  min-width: 21.1vw;
   background-color: #2F4050;
-  padding: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -95,8 +98,7 @@
   list-style-type: none;
   margin: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  /* flex-direction: row; */
   align-items: center;
   font-family: Roboto;
   color: white;
@@ -111,13 +113,21 @@
   background-color: #293846;
 }
 
+.SidebarRow {
+  justify-content: space-between;
+}
+
 .SidebarRow #SidebarIcon {
-  flex: 30%;
-  display: grid;
-  place-items: center;
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .SidebarRow #SidebarTitle {
-  flex: 70%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logout {
@@ -126,6 +136,7 @@
   border: none;
   cursor: pointer;
   width: 100%;
+  height: 60px;
 }
 
 .logout:hover {
@@ -135,7 +146,7 @@
 
 .main-chat {
   height: 100vh;
-  width: 90vw;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -153,11 +164,81 @@
   padding: 10px;
 }
 
-.feed {
-  max-width: 500px;
-  text-align: absolute
+.input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.feed li {
+.chat-form {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+}
+
+.chat-input {
+  width: 70vw;
+  color: white;
+  font-size: 18px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 12px 15px;
+  border-radius: 5px;
+  box-shadow:
+    rgba(0,0,0, 0.05) 0 4px 6px,
+    rgba(0,0,0, 0.05) 0 12px 3px,
+    rgba(0,0,0, 0.05) 0 -3px 5px;
+  margin-top: 200px;
+}
+
+.chat-input:focus{
+  outline: none;
+}
+
+.chat-submit {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: white;
+  cursor: pointer;
+  height: 46px;
+  border-radius: 5px;
+  width: 47px;
+  margin-left: 10px;
+  box-shadow:
+    rgba(0,0,0, 0.05) 0 4px 6px,
+    rgba(0,0,0, 0.05) 0 12px 3px,
+    rgba(0,0,0, 0.05) 0 -3px 5px;
+  margin-top: 200px;
+}
+
+.feed {
+  max-width: 500px;
+  text-align: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feed-li {
   list-style-type: none;
+}
+
+.main-chat h1 {
+  font-size: 45px;
+  margin-top: 20px;
+}
+
+/* show page */
+
+.show-containter {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
 }

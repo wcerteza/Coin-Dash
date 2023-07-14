@@ -28,13 +28,16 @@ const Chat = ({ user }) => {
     <div className="main-chat">
       <h1>CryptoGPT</h1>
       <ul className="feed">
-        <li>{isLoading ? <CircularProgress /> : response}</li>
+        <li className="feed-li">
+          {isLoading ? <CircularProgress /> : response}
+        </li>
       </ul>
       <div className="bottom-section">
         <div className="input-container">
-          <form onSubmit={handleSubmit}>
+          <form className="chat-form" onSubmit={handleSubmit}>
             <input
               type="text"
+              className="chat-input"
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
             />

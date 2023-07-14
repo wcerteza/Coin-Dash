@@ -31,7 +31,7 @@ const Show = ({ user, portfolio }) => {
   return (
     <div>
       {coinDetails && (
-        <>
+        <div className="show-container">
           <div>{coinDetails.name}</div>
           <p>{coinDetails.symbol}</p>
           <img src={coinDetails.image} alt="coin-logo" />
@@ -39,7 +39,7 @@ const Show = ({ user, portfolio }) => {
           <p>Total Volume: {coinDetails.total_volume}</p>
           <p>Rank: {coinDetails.market_cap_rank}</p>
           <button onClick={() => AddCoinToPortfolio()}>add</button>
-        </>
+        </div>
       )}
     </div>
   )

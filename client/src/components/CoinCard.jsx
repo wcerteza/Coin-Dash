@@ -7,7 +7,7 @@ const CoinCard = ({ coin, index, handleCardHover }) => {
   let navigate = useNavigate()
 
   return (
-    <div>
+    <div className="coin-container">
       <div className="coin-card">
         <div
           className={`flip-card-inner ${coin.isHovered ? 'hover' : ''}`}
