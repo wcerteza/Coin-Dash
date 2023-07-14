@@ -14,7 +14,7 @@ const Portfolio = ({ user, portfolio, setLookForPortfolio }) => {
   }
 
   return user && portfolio ? (
-    <div>
+    <div className="portfolio-page">
       <h1>Your Coins</h1>
       {portfolio.coins.map((coin, idx) => (
         <div key={coin._id}>

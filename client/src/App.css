@@ -7,12 +7,12 @@
 .App {
   width: 100vw;
   height: 100vh;
-  display: flex
+  display: flex;
 }
 
 .cardWrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 
@@ -74,9 +74,13 @@
 
 
 .Sidebar {
-  height: 100%;
-  width: 250px;
+  height: 100vh;
+  width: 260px;
   background-color: #2F4050;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .SidebarList {
@@ -116,12 +120,44 @@
   flex: 70%;
 }
 
+.logout {
+  background-color: #2F4050;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.logout:hover {
+  cursor: pointer;
+  background-color: #293846;
+}
+
 .main-chat {
   height: 100vh;
-  width: 100%;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #343541;
+  color: white;
+
+}
+
+.chat-p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+  padding: 10px;
+}
+
+.feed {
+  max-width: 500px;
+  text-align: absolute
+}
+
+.feed li {
+  list-style-type: none;
 }

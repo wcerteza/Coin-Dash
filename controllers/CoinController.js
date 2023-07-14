@@ -32,7 +32,7 @@ const GetApiCoins = async (req, res) => {
 
 const GetCoins = async (req, res) => {
   try {
-    const coins = await Coin.find({}).limit(100)
+    const coins = await Coin.find({}).limit(20)
     res.send(coins)
   } catch (error) {
     throw error

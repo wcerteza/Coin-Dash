@@ -25,8 +25,8 @@ const Sidebar = ({ handleLogOut }) => {
           )
         })}
       </ul>
-      <div className="logout" onClick={handleLogoutClick}>
-        <button>
+      <div onClick={handleLogoutClick}>
+        <button className="logout">
           <LogoutIcon />
           Log Out
         </button>
