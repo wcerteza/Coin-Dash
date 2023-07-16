@@ -16,7 +16,7 @@ const CoinCard = ({ coin, index, handleCardHover }) => {
           onMouseLeave={() => handleCardHover(index)}
         >
           <div className="flip-card-front">
-            <p className="title">{coin.name}</p>
+            <p className="coin-title">{coin.name}</p>
             <img src={coin.image} alt="" />
           </div>
           <div className="flip-card-back">

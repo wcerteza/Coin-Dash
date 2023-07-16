@@ -33,10 +33,11 @@ const Register = () => {
   }
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <p className="title">Register</p>
-      <p className="message">Signup now and get full access to our app.</p>
-      <div className="flex">
+    <div className="main-register">
+      <form className="register-form" onSubmit={handleSubmit}>
+        <p className="title">Register</p>
+        <p className="message">Signup now and get full access to our app.</p>
+
         <label>
           <input
             onChange={handleChange}
@@ -49,62 +50,62 @@ const Register = () => {
           />
           <span>Name</span>
         </label>
-      </div>
 
-      <label>
-        <input
-          onChange={handleChange}
-          name="email"
-          type="email"
-          className="input"
-          placeholder=""
-          value={formValues.email}
-          required
-        />
-        <span>Email</span>
-      </label>
+        <label>
+          <input
+            onChange={handleChange}
+            name="email"
+            type="email"
+            className="input"
+            placeholder=""
+            value={formValues.email}
+            required
+          />
+          <span>Email</span>
+        </label>
 
-      <label>
-        <input
-          onChange={handleChange}
-          name="password"
-          type="password"
-          className="input"
-          placeholder=""
-          value={formValues.password}
-          required
-        />
-        <span>Password</span>
-      </label>
+        <label>
+          <input
+            onChange={handleChange}
+            name="password"
+            type="password"
+            className="input"
+            placeholder=""
+            value={formValues.password}
+            required
+          />
+          <span>Password</span>
+        </label>
 
-      <label>
-        <input
-          onChange={handleChange}
-          name="confirmPassword"
-          type="password"
-          className="input"
-          placeholder=""
-          value={formValues.confirmPassword}
-          required
-        />
-        <span>Confirm password</span>
-      </label>
+        <label>
+          <input
+            onChange={handleChange}
+            name="confirmPassword"
+            type="password"
+            className="input"
+            placeholder=""
+            value={formValues.confirmPassword}
+            required
+          />
+          <span>Confirm password</span>
+        </label>
 
-      <button
-        className="submit"
-        disabled={
-          !formValues.email ||
-          (!formValues.password &&
-            formValues.confirmPassword === formValues.password)
-        }
-      >
-        Submit
-      </button>
+        <button
+          className="submit"
+          disabled={
+            !formValues.email ||
+            (!formValues.password &&
+              formValues.confirmPassword === formValues.password)
+          }
+        >
+          Submit
+        </button>
 
-      <p className="signin">
-        Already have an account? <a href="#">Sign in</a>
-      </p>
-    </form>
+        <p className="signin">
+          Already have an account? <a href="#">Sign in</a>
+        </p>
+      </form>
+    </div>
   )
 }
 

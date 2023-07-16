@@ -147,6 +147,8 @@
   background-color: #293846;
 }
 
+/* chat page */
+
 .main-chat {
   height: 100vh;
   width: 80vw;
@@ -219,11 +221,8 @@
 }
 
 .feed {
-  text-align: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70vw;
+  width: 75vw;
+  overflow: scroll;
 }
 
 .feed-li {
@@ -248,7 +247,15 @@
 
 /* register */
 
-.form {
+.main-register {
+  height: 100vh;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -257,6 +264,7 @@
   padding: 20px;
   border-radius: 20px;
   position: relative;
+  border: 2px solid whitesmoke;
 }
 
 .title {
@@ -309,17 +317,13 @@
   text-decoration: underline royalblue;
 }
 
-.flex {
-  display: flex;
-  width: 100%;
-  gap: 6px;
-}
 
-.form label {
+
+.register-form label {
   position: relative;
 }
 
-.form label .input {
+.register-form label .input {
   width: 100%;
   padding: 10px 10px 20px 10px;
   outline: 0;
@@ -327,7 +331,7 @@
   border-radius: 10px;
 }
 
-.form label .input + span {
+.register-form label .input + span {
   position: absolute;
   left: 10px;
   top: 15px;
@@ -337,18 +341,18 @@
   transition: 0.3s ease;
 }
 
-.form label .input:placeholder-shown + span {
+.register-form label .input:placeholder-shown + span {
   top: 15px;
   font-size: 0.9em;
 }
 
-.form label .input:focus + span,.form label .input:valid + span {
+.register-form label .input:focus + span,.register-form label .input:valid + span {
   top: 30px;
   font-size: 0.7em;
   font-weight: 600;
 }
 
-.form label .input:valid + span {
+.register-form label .input:valid + span {
   color: green;
 }
 
