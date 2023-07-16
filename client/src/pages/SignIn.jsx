@@ -56,7 +56,7 @@ const SignIn = ({ setUser }) => {
         </button>
 
         <p className="signin">
-          Already have an account? <a href="#">Sign in</a>
+          Don't have an account yet? <a href="#">Create account here</a>
         </p>
       </form>
     </div>

@@ -18,8 +18,8 @@ const Coins = ({ user }) => {
   return user ? (
     <div className="cardWrapper">
       {coins.map((coin, index) => (
-        <Suspense fallback={<div>Loading...</div>}>
-          <div key={index}>
+        <Suspense fallback={<div>Loading...</div>} key={index}>
+          <div className="coinCardContainer">
             <CoinCard coin={coin} index={index} />
           </div>
         </Suspense>

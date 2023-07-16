@@ -13,11 +13,17 @@
 .cardWrapper {
   width: 78vw;
   height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
-  /* align-items: center;
-  justify-content: center; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.coinCardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .coin-card {
@@ -320,8 +326,6 @@
 .signin a:hover {
   text-decoration: underline royalblue;
 }
-
-
 
 .register-form label {
   position: relative;
