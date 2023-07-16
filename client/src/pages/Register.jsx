@@ -33,64 +33,78 @@ const Register = () => {
   }
 
   return (
-    <div className="signin col">
-      <div className="card-overlay centered">
-        <form className="col" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            <label htmlFor="name">Name</label>
-            <input
-              onChange={handleChange}
-              name="name"
-              type="text"
-              placeholder="John Smith"
-              value={formValues.name}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="email">Email</label>
-            <input
-              onChange={handleChange}
-              name="email"
-              type="email"
-              placeholder="example@example.com"
-              value={formValues.email}
-              required
-            />
-          </div>
-
-          <div className="input-wrapper">
-            <label htmlFor="password">Password</label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="password"
-              value={formValues.password}
-              required
-            />
-          </div>
-          <div className="input-wrapper">
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <input
-              onChange={handleChange}
-              type="password"
-              name="confirmPassword"
-              value={formValues.confirmPassword}
-              required
-            />
-          </div>
-          <button
-            disabled={
-              !formValues.email ||
-              (!formValues.password &&
-                formValues.confirmPassword === formValues.password)
-            }
-          >
-            Sign In
-          </button>
-        </form>
+    <form className="form" onSubmit={handleSubmit}>
+      <p className="title">Register</p>
+      <p className="message">Signup now and get full access to our app.</p>
+      <div className="flex">
+        <label>
+          <input
+            onChange={handleChange}
+            name="name"
+            type="text"
+            className="input"
+            placeholder=""
+            value={formValues.name}
+            required
+          />
+          <span>Name</span>
+        </label>
       </div>
-    </div>
+
+      <label>
+        <input
+          onChange={handleChange}
+          name="email"
+          type="email"
+          className="input"
+          placeholder=""
+          value={formValues.email}
+          required
+        />
+        <span>Email</span>
+      </label>
+
+      <label>
+        <input
+          onChange={handleChange}
+          name="password"
+          type="password"
+          className="input"
+          placeholder=""
+          value={formValues.password}
+          required
+        />
+        <span>Password</span>
+      </label>
+
+      <label>
+        <input
+          onChange={handleChange}
+          name="confirmPassword"
+          type="password"
+          className="input"
+          placeholder=""
+          value={formValues.confirmPassword}
+          required
+        />
+        <span>Confirm password</span>
+      </label>
+
+      <button
+        className="submit"
+        disabled={
+          !formValues.email ||
+          (!formValues.password &&
+            formValues.confirmPassword === formValues.password)
+        }
+      >
+        Submit
+      </button>
+
+      <p className="signin">
+        Already have an account? <a href="#">Sign in</a>
+      </p>
+    </form>
   )
 }
 
