@@ -15,22 +15,12 @@ const Coins = ({ user }) => {
     handleCoins()
   }, [])
 
-  const handleCardHover = (index) => {
-    const updatedCoins = [...coins]
-    updatedCoins[index].isHovered = !updatedCoins[index].isHovered
-    setCoins(updatedCoins)
-  }
-
   return user ? (
     <div className="cardWrapper">
       {coins.map((coin, index) => (
         <Suspense fallback={<div>Loading...</div>}>
           <div key={index}>
-            <CoinCard
-              coin={coin}
-              index={index}
-              handleCardHover={handleCardHover}
-            />
+            <CoinCard coin={coin} index={index} />
           </div>
         </Suspense>
       ))}
