@@ -471,3 +471,11 @@
   color: inherit;
   text-decoration: none;
 }
+
+/* chart */
+
+.chart-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

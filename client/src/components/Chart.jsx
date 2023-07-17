@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import useAxios from '../hooks/useAxios'
+import moment from 'moment'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -33,28 +34,27 @@ const Chart = () => {
     x: price[0],
     y: price[1].toFixed(2)
   }))
-  console.log(chartData)
+
   const options = {
     responsive: true
   }
 
   const data = {
-    labels: ['1', '20', '2'],
+    labels: chartData?.map((price) => moment(price.x).format('MMMDD')),
     datasets: [
       {
         fill: true,
         label: id,
-        data: ['10', '2', '90'],
+        data: chartData?.map((price) => price.y),
         borderColor: 'black',
         backgroundColor: 'blue'
       }
     ]
   }
-  // console.log(chartData)
 
   return (
-    <div>
-      <Line options={options} data={data} />
+    <div className="chart-wrapper">
+      <Line className="chart" options={options} data={data} />
     </div>
   )
 }

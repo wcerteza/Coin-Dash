@@ -13,6 +13,7 @@ const CoinDetail = () => {
         <img src={response?.image.small} alt="" />
         <h1>{response?.name}</h1>
       </div>
+      <p dangerouslySetInnerHTML={{ __html: response?.description.en }}></p>
     </div>
   )
 }
