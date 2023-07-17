@@ -71,6 +71,7 @@ const App = () => {
             }
           />
           <Route path="/search" element={<Search />} />
+          <Route path="/coin:id" />
         </Routes>
       </main>
     </div>
