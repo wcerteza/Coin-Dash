@@ -12,6 +12,7 @@ import Chat from './pages/Chat'
 import Portfolio from './pages/Portfolio'
 import { getPortfolioByUserId } from './services/PortfolioServices'
 import Search from './pages/Search'
+import CryptoDetail from './pages/CryptoDetail'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -71,7 +72,7 @@ const App = () => {
             }
           />
           <Route path="/search" element={<Search />} />
-          <Route path="/coin:id" />
+          <Route path="/search/:id" element={<CryptoDetail />} />
         </Routes>
       </main>
     </div>
