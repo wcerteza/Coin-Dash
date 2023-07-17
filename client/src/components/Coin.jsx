@@ -1,6 +1,15 @@
+import { useEffect, useState } from 'react'
 import { currencyFormat } from '../services/CurrencyService'
 
 const Coin = ({ coin }) => {
+  const [priceChange, setPriceChange] = useState(
+    coin.price_change_percentage_24h
+  )
+
+  useEffect(() => {
+    setPriceChange(coin.price_change_percentage_24h)
+  }, [coin.price_change_percentage_24h])
+
   return (
     <>
       <div className="market-container">
@@ -12,12 +21,8 @@ const Coin = ({ coin }) => {
         <span className="market-span">
           {currencyFormat(coin.current_price)}
         </span>
-        <span
-          style={{
-            color: coin.price_change_percentage_24h < 0 ? 'red' : 'green'
-          }}
-        >
-          {coin.price_change_percentage_24h}
+        <span style={{ color: priceChange < 0 ? 'red' : 'green' }}>
+          {priceChange}
         </span>
       </div>
     </>
