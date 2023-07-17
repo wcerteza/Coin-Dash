@@ -5,12 +5,18 @@ import ReceiptIcon from '@mui/icons-material/Receipt'
 import HowToRegIcon from '@mui/icons-material/HowToReg'
 import LoginIcon from '@mui/icons-material/Login'
 import ChatIcon from '@mui/icons-material/Chat'
+import SearchIcon from '@mui/icons-material/Search'
 
 export const SidebarData = [
   {
     title: 'Home',
     icon: <HomeIcon />,
     link: '/home'
+  },
+  {
+    title: 'Search',
+    icon: <SearchIcon />,
+    link: '/search'
   },
   {
     title: 'Coins',

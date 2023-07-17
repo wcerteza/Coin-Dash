@@ -11,6 +11,7 @@ import Show from './pages/Show'
 import Chat from './pages/Chat'
 import Portfolio from './pages/Portfolio'
 import { getPortfolioByUserId } from './services/PortfolioServices'
+import Search from './pages/Search'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -69,6 +70,7 @@ const App = () => {
               />
             }
           />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </main>
     </div>
