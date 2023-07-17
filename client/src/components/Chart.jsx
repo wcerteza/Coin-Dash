@@ -7,14 +7,14 @@ const Chart = () => {
     `coins/${id}/market_chart?vs_currency=usd&days=7`
   )
 
-  const chartData = response.prices.map((price) => ({
-    x: price[0],
-    y: price[1].toFixed(2)
-  }))
+  // const chartData = response.prices.map((price) => ({
+  //   x: price[0],
+  //   y: price[1].toFixed(2)
+  // }))
 
-  console.log(chartData)
+  console.log(response)
 
-  return <div></div>
+  return <div>Chart</div>
 }
 
 export default Chart
