@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { currencyFormat } from '../services/CurrencyService'
+import { Link } from 'react-router-dom'
 
 const Coin = ({ coin }) => {
   const [priceChange, setPriceChange] = useState(
@@ -11,7 +12,7 @@ const Coin = ({ coin }) => {
   }, [coin.price_change_percentage_24h])
 
   return (
-    <>
+    <Link className="link-wrapper" to={`/search/${coin.id}`}>
       <div className="market-container">
         <div className="market-list">
           <img className="market-img" src={coin.image} alt="" />
@@ -25,7 +26,7 @@ const Coin = ({ coin }) => {
           {priceChange}
         </span>
       </div>
-    </>
+    </Link>
   )
 }
 
