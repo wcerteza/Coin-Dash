@@ -1,9 +1,9 @@
-import Trending from '../components/Trending'
+import Markets from '../components/Markets'
 
 const Search = () => {
   return (
     <div>
-      <Trending />
+      <Markets />
     </div>
   )
 }
