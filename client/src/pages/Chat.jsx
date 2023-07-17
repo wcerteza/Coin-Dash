@@ -27,11 +27,15 @@ const Chat = ({ user }) => {
   return user ? (
     <div className="main-chat">
       <h1>CryptoGPT</h1>
-      <ul className="feed">
-        <li className="feed-li">
-          {isLoading ? <CircularProgress /> : response}
-        </li>
-      </ul>
+      {isLoading ? (
+        <CircularProgress />
+      ) : (
+        <>
+          <ul className="feed">
+            <li className="feed-li">{response}</li>
+          </ul>
+        </>
+      )}
       <div className="bottom-section">
         <div className="input-container">
           <form className="chat-form" onSubmit={handleSubmit}>
