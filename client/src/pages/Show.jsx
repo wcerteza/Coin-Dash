@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { GetCoinDetail } from '../services/CoinServices'
-import { AddCoinToPortfolio } from '../services/PortfolioServices'
 import axios from 'axios'
+import { currencyFormat } from '../services/CurrencyService'
 
 const Show = ({ user, portfolio }) => {
   const [coinDetails, setCoinDetails] = useState()
@@ -35,10 +35,12 @@ const Show = ({ user, portfolio }) => {
           <div>{coinDetails.name}</div>
           <p>{coinDetails.symbol}</p>
           <img src={coinDetails.image} alt="coin-logo" />
-          <p>Current Price: ${coinDetails.current_price}</p>
+          <p>Current Price: {currencyFormat(coinDetails.current_price)}</p>
           <p>Total Volume: {coinDetails.total_volume}</p>
           <p>Rank: {coinDetails.market_cap_rank}</p>
-          <button onClick={() => AddCoinToPortfolio()}>add</button>
+          <button className="show-button" onClick={() => AddCoinToPortfolio()}>
+            add
+          </button>
         </div>
       )}
     </div>

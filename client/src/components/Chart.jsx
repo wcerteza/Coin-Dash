@@ -46,8 +46,8 @@ const Chart = () => {
         fill: true,
         label: id,
         data: chartData?.map((price) => price.y),
-        borderColor: 'black',
-        backgroundColor: 'blue'
+        borderColor: 'rgba(19, 87, 184, 0.8)',
+        backgroundColor: 'rgba(107, 183, 255, 0.8)'
       }
     ]
   }

@@ -10,10 +10,15 @@ const CoinDetail = () => {
   return (
     <div className="coindetail-container">
       <div className="coindetail-details">
-        <img src={response?.image.small} alt="" />
-        <h1>{response?.name}</h1>
+        <img className="chart-img" src={response?.image.small} alt="" />
+        <h1 className="chart-title">{response?.name}</h1>
       </div>
-      <p dangerouslySetInnerHTML={{ __html: response?.description.en }}></p>
+      <div className="description-container">
+        <p
+          className="chart-description"
+          dangerouslySetInnerHTML={{ __html: response?.description.en }}
+        ></p>
+      </div>
     </div>
   )
 }
