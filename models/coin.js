@@ -1,4 +1,3 @@
-const mongoose = require('mongoose')
 const { Schema } = require('mongoose')
 
 const coinSchema = new Schema({
@@ -28,4 +27,4 @@ const coinSchema = new Schema({
   }
 })
 
-module.exports = mongoose.model('Coin', coinSchema)
+module.exports = coinSchema

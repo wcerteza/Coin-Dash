@@ -1,5 +1,4 @@
-const coin = require('../models/coin')
-const Coin = require('../models/coin')
+const { Coin } = require('../models')
 const axios = require('axios')
 
 const GetApiCoins = async (req, res) => {

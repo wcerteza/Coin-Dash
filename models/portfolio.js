@@ -1,4 +1,3 @@
-const mongoose = require('mongoose')
 const { Schema } = require('mongoose')
 
 const portfolioSchema = new Schema({
@@ -18,4 +17,4 @@ const portfolioSchema = new Schema({
   ]
 })
 
-module.exports = mongoose.model('Portfolio', portfolioSchema)
+module.exports = portfolioSchema

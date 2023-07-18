@@ -1,6 +1,4 @@
-const Portfolio = require('../models/Portfolio')
-const coin = require('../models/coin')
-const Coin = require('../models/coin')
+const { Portfolio } = require('../models')
 
 const createPortfolio = async (req, res) => {
   try {

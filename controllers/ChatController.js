@@ -1,6 +1,6 @@
 const { Configuration, OpenAIApi } = require('openai')
 require('dotenv').config()
-const Chat = require('../models/Chat')
+const { Chat } = require('../models')
 
 const configuration = new Configuration({
   apiKey: process.env.API_KEY
