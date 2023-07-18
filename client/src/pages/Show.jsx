@@ -38,8 +38,11 @@ const Show = ({ user, portfolio }) => {
           <p>Current Price: {currencyFormat(coinDetails.current_price)}</p>
           <p>Total Volume: {coinDetails.total_volume}</p>
           <p>Rank: {coinDetails.market_cap_rank}</p>
-          <button className="show-button" onClick={() => AddCoinToPortfolio()}>
-            add
+          <button className="learn-more" onClick={() => AddCoinToPortfolio()}>
+            <span className="circle" aria-hidden="true">
+              <span className="icon arrow"></span>
+            </span>
+            <span className="button-text">Add to Portfolio</span>
           </button>
         </div>
       )}
