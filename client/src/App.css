@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* overflow-x: hidden; */
 }
 
 .App {
@@ -109,7 +108,6 @@
   list-style-type: none;
   margin: 0;
   display: flex;
-  /* flex-direction: row; */
   align-items: center;
   font-family: Roboto;
   color: white;
@@ -266,15 +264,47 @@
 
 /* show page */
 
-.show-container {
+.show-wrapper {
   width: 80vw;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
-button {
+.show-container {
+  padding: 20px;
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+}
+
+.show-name {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.show-symbol {
+  color: #343541;
+}
+
+.show-container:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: 1s;
+}
+
+.show-title {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.show-title-span {
+  color: #2563eb;
+}
+
+button.learn-more {
+  width: 15rem;
+  height: auto;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -286,11 +316,7 @@ button {
   padding: 0;
   font-size: inherit;
   font-family: inherit;
-}
-
-button.learn-more {
-  width: 15rem;
-  height: auto;
+  bottom: 0;
 }
 
 button.learn-more .circle {
@@ -300,7 +326,7 @@ button.learn-more .circle {
   margin: 0;
   width: 3rem;
   height: 3rem;
-  background: #282936;
+  background: #2F4050;
   border-radius: 1.625rem;
 }
 
@@ -602,7 +628,7 @@ button:hover .button-text {
 
 .chart-description {
   width: 80vh;
-  padding: 20px;
+  padding: 14px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 15px rgba(0, 0, 0, 0.1);
 

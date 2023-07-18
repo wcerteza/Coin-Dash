@@ -30,20 +30,25 @@ const Show = ({ user, portfolio }) => {
 
   return (
     <div>
+      <h1 className="show-title">
+        More About <span className="show-title-span">{coinDetails?.name}</span>
+      </h1>
       {coinDetails && (
-        <div className="show-container">
-          <div>{coinDetails.name}</div>
-          <p>{coinDetails.symbol}</p>
-          <img src={coinDetails.image} alt="coin-logo" />
-          <p>Current Price: {currencyFormat(coinDetails.current_price)}</p>
-          <p>Total Volume: {coinDetails.total_volume}</p>
-          <p>Rank: {coinDetails.market_cap_rank}</p>
-          <button className="learn-more" onClick={() => AddCoinToPortfolio()}>
-            <span className="circle" aria-hidden="true">
-              <span className="icon arrow"></span>
-            </span>
-            <span className="button-text">Add to Portfolio</span>
-          </button>
+        <div className="show-wrapper">
+          <div className="show-container">
+            <div className="show-name">{coinDetails.name}</div>
+            <p className="show-symbol">({coinDetails.symbol})</p>
+            <img src={coinDetails.image} alt="coin-logo" />
+            <p>Current Price: {currencyFormat(coinDetails.current_price)}</p>
+            <p>Total Volume: {coinDetails.total_volume}</p>
+            <p>Rank: {coinDetails.market_cap_rank}</p>
+            <button className="learn-more" onClick={() => AddCoinToPortfolio()}>
+              <span className="circle" aria-hidden="true">
+                <span className="icon arrow"></span>
+              </span>
+              <span className="button-text">Add to Portfolio</span>
+            </button>
+          </div>
         </div>
       )}
     </div>
