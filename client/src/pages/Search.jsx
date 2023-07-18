@@ -1,9 +1,16 @@
 import Markets from '../components/Markets'
+import { useNavigate } from 'react-router-dom'
 
-const Search = () => {
-  return (
+const Search = ({ user }) => {
+  let navigate = useNavigate()
+  return user ? (
     <div>
       <Markets />
+    </div>
+  ) : (
+    <div className="not-user-container">
+      <h3>Please sign in to view Coins</h3>
+      <button onClick={() => navigate('/signin')}>Sign In</button>
     </div>
   )
 }

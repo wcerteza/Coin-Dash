@@ -20,7 +20,6 @@ const Portfolio = ({ user, portfolio, setLookForPortfolio }) => {
       {portfolio.coins.map((coin, idx) => (
         <div key={coin._id} className="portfolio-container">
           <img src={coin.coinId.image} alt="" />
-          <p>{coin.coinId.market_cap_rank}.</p>
           <p>{coin.coinId.name}</p>
           <p>({coin.coinId.symbol})</p>
           <button
@@ -35,7 +34,7 @@ const Portfolio = ({ user, portfolio, setLookForPortfolio }) => {
       ))}
     </div>
   ) : (
-    <div>
+    <div className="not-user-container">
       <h3>Please sign in to view Coins</h3>
       <button onClick={() => navigate('/signin')}>Sign In</button>
     </div>

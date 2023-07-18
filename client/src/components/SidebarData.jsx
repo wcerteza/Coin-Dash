@@ -1,4 +1,3 @@
-import HomeIcon from '@mui/icons-material/Home'
 import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin'
 import FolderIcon from '@mui/icons-material/Folder'
 import ReceiptIcon from '@mui/icons-material/Receipt'
@@ -8,11 +7,6 @@ import ChatIcon from '@mui/icons-material/Chat'
 import AutoGraphIcon from '@mui/icons-material/AutoGraph'
 
 export const SidebarData = [
-  {
-    title: 'Home',
-    icon: <HomeIcon />,
-    link: '/home'
-  },
   {
     title: 'Markets',
     icon: <AutoGraphIcon />,

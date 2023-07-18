@@ -1,7 +1,6 @@
 import './App.css'
 import { useState, useEffect } from 'react'
 import { CheckSession } from './services/Auth'
-import Home from './pages/Home'
 import Sidebar from './components/Sidebar'
 import Register from './pages/Register'
 import SignIn from './pages/SignIn'
@@ -58,7 +57,6 @@ const App = () => {
             path="/:coin_id"
             element={<Show user={user} portfolio={portfolio} />}
           />
-          <Route path="/home" element={<Home />} />
           <Route path="/chat" element={<Chat user={user} />} />
           <Route
             path="/portfolio"
@@ -71,8 +69,8 @@ const App = () => {
               />
             }
           />
-          <Route path="/search" element={<Search />} />
-          <Route path="/search/:id" element={<CryptoDetail />} />
+          <Route path="/search" element={<Search user={user} />} />
+          <Route path="/search/:id" element={<CryptoDetail user={user} />} />
         </Routes>
       </main>
     </div>

@@ -748,3 +748,15 @@ button:hover .button-text {
   transform: translateY(0px);
   transition-duration: 0.3s;
 }
+
+/* logged out view */
+
+.not-user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 100vh;
+  font-family: Roboto;
+}
