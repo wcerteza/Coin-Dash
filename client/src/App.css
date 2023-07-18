@@ -418,9 +418,10 @@ button:hover .button-text {
   padding: 50px;
   border-radius: 20px;
   position: relative;
-  border: 2px solid rgb(142, 142, 142);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  /* border: 2px solid rgb(222, 222, 222); */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
 
 .title {
   font-size: 28px;
