@@ -9,8 +9,10 @@ const Search = ({ user }) => {
     </div>
   ) : (
     <div className="not-user-container">
-      <h3>Please sign in to view Coins</h3>
-      <button onClick={() => navigate('/signin')}>Sign In</button>
+      <h3>Please sign in to view Markets</h3>
+      <button className="not-user-button" onClick={() => navigate('/signin')}>
+        Sign In
+      </button>
     </div>
   )
 }

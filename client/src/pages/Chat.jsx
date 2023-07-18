@@ -58,8 +58,10 @@ const Chat = ({ user }) => {
     </div>
   ) : (
     <div className="not-user-container">
-      <h3>Please sign in to view Coins</h3>
-      <button onClick={() => navigate('/signin')}>Sign in</button>
+      <h3>Please sign in to view AI-chatbot</h3>
+      <button className="not-user-button" onClick={() => navigate('/signin')}>
+        Sign in
+      </button>
     </div>
   )
 }

@@ -28,7 +28,9 @@ const Coins = ({ user }) => {
   ) : (
     <div className="not-user-container">
       <h3>Please sign in to view Coins</h3>
-      <button onClick={() => navigate('/signin')}>Sign In</button>
+      <button className="not-user-button" onClick={() => navigate('/signin')}>
+        Sign In
+      </button>
     </div>
   )
 }
