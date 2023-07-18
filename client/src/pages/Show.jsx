@@ -3,10 +3,12 @@ import { useParams } from 'react-router-dom'
 import { GetCoinDetail } from '../services/CoinServices'
 import axios from 'axios'
 import { currencyFormat } from '../services/CurrencyService'
+import { useNavigate } from 'react-router-dom'
 
 const Show = ({ user, portfolio }) => {
   const [coinDetails, setCoinDetails] = useState()
   let { coin_id } = useParams()
+  let navigate = useNavigate()
 
   useEffect(() => {
     const getCoinDetails = async () => {
@@ -26,6 +28,7 @@ const Show = ({ user, portfolio }) => {
       userId: user.id
     }
     axios.put(`http://localhost:3001/portfolio/${portfolio._id}/`, payload)
+    navigate('/portfolio')
   }
 
   return (
