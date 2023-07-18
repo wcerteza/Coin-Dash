@@ -11,7 +11,7 @@
 }
 
 .cardWrapper {
-  width: 78vw;
+  width: 80vw;
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
@@ -657,10 +657,18 @@ button:hover .button-text {
 
 .portfolio-page {
   width: 80vw;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+}
+
+.portfolio-h1 {
+  margin-top: 1em;
+  text-align: center;
+  font-family: Roboto;
 }
 
 .portfolio-container {
@@ -670,6 +678,7 @@ button:hover .button-text {
   padding: 5px;
   margin: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .portfolio-container img {
