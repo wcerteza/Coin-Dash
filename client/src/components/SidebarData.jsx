@@ -5,7 +5,7 @@ import ReceiptIcon from '@mui/icons-material/Receipt'
 import HowToRegIcon from '@mui/icons-material/HowToReg'
 import LoginIcon from '@mui/icons-material/Login'
 import ChatIcon from '@mui/icons-material/Chat'
-import SearchIcon from '@mui/icons-material/Search'
+import AutoGraphIcon from '@mui/icons-material/AutoGraph'
 
 export const SidebarData = [
   {
@@ -14,8 +14,8 @@ export const SidebarData = [
     link: '/home'
   },
   {
-    title: 'Search',
-    icon: <SearchIcon />,
+    title: 'Markets',
+    icon: <AutoGraphIcon />,
     link: '/search'
   },
   {
