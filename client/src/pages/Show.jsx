@@ -27,7 +27,10 @@ const Show = ({ user, portfolio }) => {
       coinId: coin_id,
       userId: user.id
     }
-    axios.put(`http://localhost:3001/portfolio/${portfolio._id}/`, payload)
+    axios.put(
+      `https://coin-dash-wc-211727c8c962.herokuapp.com/portfolio/${portfolio._id}/`,
+      payload
+    )
     navigate('/portfolio')
   }
 
