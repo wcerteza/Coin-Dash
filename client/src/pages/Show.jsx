@@ -51,9 +51,8 @@ const Show = ({ user, portfolio }) => {
               {coinDetails.total_volume}
             </p>
             <p>
-              <span className="show-span">
-                Rank: {coinDetails.market_cap_rank}
-              </span>
+              <span className="show-span">Rank: </span>
+              {coinDetails.market_cap_rank}
             </p>
             <button className="learn-more" onClick={() => AddCoinToPortfolio()}>
               <span className="circle" aria-hidden="true">
