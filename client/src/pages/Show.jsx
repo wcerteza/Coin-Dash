@@ -39,9 +39,19 @@ const Show = ({ user, portfolio }) => {
             <div className="show-name">{coinDetails.name}</div>
             <p className="show-symbol">({coinDetails.symbol})</p>
             <img src={coinDetails.image} alt="coin-logo" />
-            <p>Current Price: {currencyFormat(coinDetails.current_price)}</p>
-            <p>Total Volume: {coinDetails.total_volume}</p>
-            <p>Rank: {coinDetails.market_cap_rank}</p>
+            <p>
+              <span className="show-span">Current Price: </span>
+              {currencyFormat(coinDetails.current_price)}
+            </p>
+            <p>
+              <span className="show-span">Total Volume: </span>
+              {coinDetails.total_volume}
+            </p>
+            <p>
+              <span className="show-span">
+                Rank: {coinDetails.market_cap_rank}
+              </span>
+            </p>
             <button className="learn-more" onClick={() => AddCoinToPortfolio()}>
               <span className="circle" aria-hidden="true">
                 <span className="icon arrow"></span>

@@ -32,6 +32,8 @@
   height: 200px;
   perspective: 1000px;
   font-family: sans-serif;
+  color: black;
+  text-decoration: none;
 }
 
 .title {
@@ -122,18 +124,18 @@
   background-color: #293846;
 }
 
-.SidebarRow {
+/* .SidebarRow {
   justify-content: space-between;
-}
+} */
 
 .SidebarRow #SidebarIcon {
   width: 30%;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  margin-left: 1em;
 }
 .SidebarRow #SidebarTitle {
-  width: 70%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -293,9 +295,14 @@
   transition: 1s;
 }
 
+.show-span{
+  color: #343541;
+}
+
 .show-title {
   text-align: center;
-  margin-top: 1em;
+  margin-top: .7em;
+  font-family: Roboto;
 }
 
 .show-title-span {
@@ -565,6 +572,7 @@ button:hover .button-text {
 .market-title {
   text-align: center;
   margin: 10px;
+  font-family: Roboto;
 }
 
 .market-span {
@@ -629,6 +637,7 @@ button:hover .button-text {
 .chart-description {
   width: 80vh;
   padding: 14px;
+  font-family: Roboto;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 15px rgba(0, 0, 0, 0.1);
 

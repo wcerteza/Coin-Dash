@@ -8,7 +8,7 @@ const Markets = () => {
 
   return (
     <main className="market-wrapper">
-      <h1 className="market-title">Markets</h1>
+      <h1 className="market-title">Market</h1>
       {response && response.map((coin) => <Coin key={coin.id} coin={coin} />)}
     </main>
   )

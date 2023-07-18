@@ -1,6 +1,3 @@
-import { useEffect, useState } from 'react'
-import { GetCoins } from '../services/CoinServices'
-import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 const CoinCard = ({ coin }) => {
