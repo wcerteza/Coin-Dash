@@ -4,6 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "proxy": "http://localhost:3001",
+  "engines": {
+    "node": "20.x",
+    "npm": "9.x"
+  },
   "scripts": {
     "dev": "vite",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
