@@ -771,6 +771,7 @@ button:hover .button-text {
 }
 
 .not-user-button {
+  margin-top: 1em;
   display: flex;
   align-items: center;
   justify-content: flex-start;
