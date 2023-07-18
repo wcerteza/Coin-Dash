@@ -769,3 +769,70 @@ button:hover .button-text {
   height: 100vh;
   font-family: Roboto;
 }
+
+.not-user-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color:#2F4050;
+}
+
+/* plus sign */
+.not-user-sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-user-sign svg {
+  width: 17px;
+}
+
+.not-user-sign svg path {
+  fill: white;
+}
+/* text */
+.not-user-text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+.not-user-button:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.not-user-button:hover .not-user-sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.not-user-button:hover .not-user-text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.not-user-button:active {
+  transform: translate(2px ,2px);
+}
