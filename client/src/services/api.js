@@ -1,6 +1,6 @@
 import Axios from 'axios'
 
-export const BASE_URL = 'https://coin-dash-wc-211727c8c962.herokuapp.com/'
+export const BASE_URL = 'https://coin-dash-wc-211727c8c962.herokuapp.com'
 
 const Client = Axios.create({ baseURL: BASE_URL })
 

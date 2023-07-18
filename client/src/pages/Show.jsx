@@ -4,6 +4,7 @@ import { GetCoinDetail } from '../services/CoinServices'
 import axios from 'axios'
 import { currencyFormat } from '../services/CurrencyService'
 import { useNavigate } from 'react-router-dom'
+import { BASE_URL } from '../services/api'
 
 const Show = ({ user, portfolio }) => {
   const [coinDetails, setCoinDetails] = useState()
@@ -27,10 +28,7 @@ const Show = ({ user, portfolio }) => {
       coinId: coin_id,
       userId: user.id
     }
-    axios.put(
-      `https://coin-dash-wc-211727c8c962.herokuapp.com/portfolio/${portfolio._id}/`,
-      payload
-    )
+    axios.put(`${BASE_URL}/portfolio/${portfolio._id}/`, payload)
     navigate('/portfolio')
   }
 

@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import { DeleteCoinFromPortfolio } from '../services/PortfolioServices'
-import { Profiler } from 'react'
 
 const Portfolio = ({ user, portfolio, setLookForPortfolio }) => {
   let navigate = useNavigate()
