@@ -1,5 +1,6 @@
 import { SidebarData } from './SidebarData'
 import LogoutIcon from '@mui/icons-material/Logout'
+import { NavLink } from 'react-router-dom'
 
 const Sidebar = ({ handleLogOut }) => {
   const handleLogoutClick = () => {
@@ -11,17 +12,19 @@ const Sidebar = ({ handleLogOut }) => {
       <ul className="SidebarList">
         {SidebarData.map((val, key) => {
           return (
-            <li
-              className="SidebarRow"
-              key={key}
-              id={window.location.pathname === val.link ? 'active' : ''}
-              onClick={() => {
-                window.location.pathname = val.link
-              }}
-            >
-              <div id="SidebarIcon">{val.icon}</div>
-              <div id="SidebarTitle">{val.title}</div>
-            </li>
+            <NavLink to={val.link}>
+              <li
+                className="SidebarRow"
+                key={key}
+                // id={window.location.pathname === val.link ? 'active' : ''}
+                // onClick={() => {
+                //   window.location.pathname = val.link
+                // }}
+              >
+                <div id="SidebarIcon">{val.icon}</div>
+                <div id="SidebarTitle">{val.title}</div>
+              </li>
+            </NavLink>
           )
         })}
       </ul>
