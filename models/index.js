@@ -7,7 +7,7 @@ const coinSchema = require('./Coin')
 
 const User = mongoose.model('User', userSchema)
 const Coin = mongoose.model('Coin', coinSchema)
-const Portfolio = mongoose.model('Porfolio', portfolioSchema)
+const Portfolio = mongoose.model('Portfolio', portfolioSchema)
 const Chat = mongoose.model('Chat', chatSchema)
 
 module.exports = {
