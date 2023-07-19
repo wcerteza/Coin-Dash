@@ -1,6 +1,6 @@
 import { SidebarData } from './SidebarData'
 import LogoutIcon from '@mui/icons-material/Logout'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Sidebar = ({ handleLogOut }) => {
   const handleLogoutClick = () => {
@@ -11,8 +11,9 @@ const Sidebar = ({ handleLogOut }) => {
     <div className="Sidebar">
       <ul className="SidebarList">
         {SidebarData.map((val, key) => {
+          console.log(val.link)
           return (
-            <NavLink to="/search">
+            <Link to={`${val.link}`}>
               <li
                 className="SidebarRow"
                 key={key}
@@ -24,7 +25,7 @@ const Sidebar = ({ handleLogOut }) => {
                 <div id="SidebarIcon">{val.icon}</div>
                 <div id="SidebarTitle">{val.title}</div>
               </li>
-            </NavLink>
+            </Link>
           )
         })}
       </ul>
