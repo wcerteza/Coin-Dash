@@ -12,7 +12,7 @@ const Sidebar = ({ handleLogOut }) => {
       <ul className="SidebarList">
         {SidebarData.map((val, key) => {
           return (
-            <NavLink to={val.link}>
+            <NavLink to="/search">
               <li
                 className="SidebarRow"
                 key={key}
