@@ -1,13 +1,10 @@
 import { SidebarData } from './SidebarData'
 import LogoutIcon from '@mui/icons-material/Logout'
 import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
 
 const Sidebar = ({ handleLogOut }) => {
-  let navigate = useNavigate()
   const handleLogoutClick = () => {
     handleLogOut()
-    navigate('/signin')
   }
 
   return (

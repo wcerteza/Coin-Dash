@@ -12,11 +12,13 @@ import Portfolio from './pages/Portfolio'
 import { getPortfolioByUserId } from './services/PortfolioServices'
 import Search from './pages/Search'
 import CryptoDetail from './pages/CryptoDetail'
+import { useNavigate } from 'react-router-dom'
 
 const App = () => {
   const [user, setUser] = useState(null)
   const [portfolio, setPortfolio] = useState(null)
   const [lookForPortfolio, setLookForPortfolio] = useState(false)
+  let navigate = useNavigate()
 
   useEffect(() => {
     const token = localStorage.getItem('token')
@@ -28,6 +30,7 @@ const App = () => {
   const handleLogOut = () => {
     setUser(null)
     localStorage.clear()
+    navigate('/signin')
   }
 
   const checkToken = async () => {
