@@ -35,7 +35,7 @@
 
 ### **_Links_**
 
-#### Deployed Application: [Open Note]()
+#### Deployed Application: [Coin Dash](https://wc-coin-dash.surge.sh/)
 
 #### [Trello](https://trello.com/b/NULXNmDc/open-note)
 

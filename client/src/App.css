@@ -117,11 +117,13 @@
   align-items: center;
   font-family: Roboto;
   color: white;
+  text-decoration: none;
 }
 
 .SidebarList .SidebarRow:hover {
   cursor: pointer;
   background-color: #293846;
+  text-decoration: none;
 }
 
 .SidebarList #active {
