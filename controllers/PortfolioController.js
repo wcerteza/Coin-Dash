@@ -47,7 +47,6 @@ const addCoinToPortfolio = async (req, res) => {
     } else {
     }
   } catch (error) {
-    console.log(req.body)
     let newPortfolio = { coins: [] }
     newPortfolio.userId = req.body.userId
     newPortfolio.coins.push({ coinId })

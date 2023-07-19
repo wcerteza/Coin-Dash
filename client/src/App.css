@@ -102,6 +102,10 @@
   justify-content: space-between;
 }
 
+a {
+  text-decoration: none;
+}
+
 .SidebarList {
   height: auto;
   padding: 0;
@@ -130,9 +134,9 @@
   background-color: #293846;
 }
 
-/* .SidebarRow {
-  justify-content: space-between;
-} */
+.SidebarRow {
+  text-decoration: none;
+}
 
 .SidebarRow #SidebarIcon {
   width: 30%;
@@ -147,6 +151,14 @@
   align-items: center;
   text-decoration: none;
   color: inherit;
+}
+
+#SidebarTitle {
+  text-decoration: none;
+}
+
+#SidebarTitle:hover{
+  text-decoration:none;
 }
 
 .logout {
@@ -177,9 +189,12 @@
   align-items: center;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  background-color: #343541;
+  background-color: white;
   color: white;
+}
 
+.main-chat h1 {
+  color: black;
 }
 
 .chat-p {
@@ -206,10 +221,10 @@
 
 .chat-input {
   width: 67vw;
-  color: white;
+  color: black;
   font-size: 18px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 12px 15px;
   border-radius: 5px;
   box-shadow:
@@ -229,7 +244,7 @@
 .chat-submit {
   background-color: rgba(255, 255, 255, 0.05);
   border: none;
-  color: white;
+  color: black;
   cursor: pointer;
   height: 46px;
   border-radius: 5px;
@@ -250,6 +265,7 @@
   padding: 20px;
   overflow-x: hidden;
   scrollbar-width: thin;
+  color: black;
 }
 
 .feed::-webkit-scrollbar {
@@ -257,7 +273,8 @@
 }
 
 .feed::-webkit-scrollbar-thumb {
-  background-color: rgb(124, 124, 124);
+  background-color: white;
+  border: 2px solid rgb(124, 124, 124);
   border-radius: 5px;
   outline: 2px solid whitesmoke;
   height: 1em;
